@@ -26,15 +26,17 @@ module.exports = function (onLoop) {
 
     //# Scan for cards
     let response = mfrc522.findCard();
+
+    if (onLoop) {
+      onLoop(!!response.status);
+    }
+
     if (!response.status) {
       console.log("No Card");
       return;
     }
     console.log("Card detected, CardType: " + response.bitSize);
 
-    if (onLoop) {
-      onLoop();
-    }
 
     //# Get the UID of the card
     response = mfrc522.getUid();

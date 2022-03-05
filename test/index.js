@@ -17,7 +17,7 @@ function play() {
 function stop() {
   playing = false;
   if (player) {
-    player.stop();
+    // player.stop();
   }
 }
 

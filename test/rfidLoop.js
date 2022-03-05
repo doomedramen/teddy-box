@@ -1,6 +1,5 @@
-// const Mfrc522 = require("./../index");
+const Mfrc522 = require("mfrc522-rpi");
 const SoftSPI = require("rpi-softspi");
-// const Mfrc522 = SoftSPI.mfrc522;
 
 
 module.exports = function (onLoop) {
